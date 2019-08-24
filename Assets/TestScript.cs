@@ -5,14 +5,14 @@ using UnityEngine;
 public class Boss{ 
     private int hp = 100;          
     private int power = 25;
-    private int mp = 35;
+    private int mp = 53;
 
     public void Magic() {
         if (mp >= 5){
             mp -= 5;
             Debug.Log("魔法攻撃をした。のこりMPは" + mp + "。");
         }else
-            Debug.Log("mpが足りないので使えない…");
+            Debug.Log("mpが足りないので使えない");
     }
 
 
@@ -47,12 +47,12 @@ public class TestScript : MonoBehaviour {
 
         int []array = {800, 50, 20, 1, 3213 };
 
-        for ( i = 0;i<5;i++) {
+        for ( i = 0;i<array.Length;i++) {
             Debug.Log(array[i]);
         }
 
-        for (i = 4;i <= 0;i--){
-            Debug.Log(array[i]);
+        for (i = 0;i<array.Length;i++){
+            Debug.Log(array[array.Length - i - 1]);
         }
 
         for (i = 0; i < 11; i++){
